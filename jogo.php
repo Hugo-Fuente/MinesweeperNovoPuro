@@ -11,27 +11,47 @@
 </head>
 
 <body>
-Página do jogo aqui <br><br>
-
-<?php
-    session_start();
-    include('verifica_login.php');
-?>
-
-<script>
-    resultado = "perdeu";
-    tempo = 3;
-    sessionStorage.setItem("resultado", resultado);
-    sessionStorage.setItem("tempo", tempo);
-</script>
 
 
-<button class="normal" type="button" onclick="window.location.href='configuracao.php'">Configurar Partida</button><br>
-<button class="normal" type="button" onclick="window.location.href='historico.php'">Historico</button>
-<button class="normal" type="button" onclick="window.location.href='ranking.php'">Ranking</button><br>
-<button class="normal" type="button" onclick="window.location.href='editar.html'">Editar Perfil</button><br>
-<button class="normal" type="button" onclick="window.location.href='fimdejogo.php'">Quando o jogo acabar, vá para essa página</button><br>
-<button class="normal" type="button" onclick="window.location.href='logout.php'">Sair</button>
+    <?php
+        session_start();
+        include('verifica_login.php');
+    ?>
+
+    <section id="tela">
+        <section class="cabecalho">
+            <h1 class="titulo">Campo Minado</h1>
+        </section>
+
+        <aside class="lateral">
+            <h4>Informações</h4>
+            Tempo: <div id="tempo"></div><br/><br/>
+            Dimensão: <div id="dimensao"><p id="dimensaoX" class="box"></p>x<p id="dimensaoY" class="box"></p></div><br/><br/>
+            Bombas: <div id="bombas"></div><br><br>
+            Modalidade: <div id="modalidade" class="box"></div><br><br>
+            <div id="rivotril" class="box"></div><div id="tempoRivotril"></div>
+        </aside>
+
+        <!-- onde o jogo irá rodar -->
+        <section id="jogo">
+            <table id=grid onclick="start(); this.onclick=null;">
+            </table>
+        </section>             
+            
+        <section class="botoes">  
+            <button class="normal" type="button" onclick="cheatButton();">Trapaça</button>
+            <button class="normal" type="button" onclick="window.location.href='index.html'">Voltar</button>
+        </section>
+    </section>
+
+    <script src="campominado.js"></script>
+
+    <script>
+        resultado = "perdeu";
+        tempo = 3;
+        sessionStorage.setItem("resultado", resultado);
+        sessionStorage.setItem("tempo", tempo);
+    </script>
 
 </body>
 </html>

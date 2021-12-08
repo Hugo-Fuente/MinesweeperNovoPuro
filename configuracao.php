@@ -24,7 +24,7 @@
         <h4 id="invalido"></h4>
         <h4 id="invalido2"></h4>
 
-        <form name="configuracao" action="configurar.php" method="POST">
+        <form name="formulario" action="configurar.php" method="POST">
             <p>Dimensão: <input class="pequeno" type="number" name="dimensao" required /><br>
 
             <p>Quantidade de Bombas: <input class="pequeno" type="number" name="qbombas" required /></p><br>
@@ -36,9 +36,7 @@
                 <option value="rivotril">Rivotril</option>
             </select><br><br><br>
 
-            <input class="normal" type="submit" value="jogar" name="configuracao"/>
-
-            <!-- <button class="normal" type="button" onclick="window.location.href='jogo.php'">jogar</button> -->
+            <input class="normal" type="submit" value="JOGAR" name="configuracao"/>
         </form>
     </section>
 

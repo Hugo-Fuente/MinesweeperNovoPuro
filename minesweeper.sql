@@ -65,8 +65,8 @@ CREATE TABLE IF NOT EXISTS `partida` (
   `dimensao` int NOT NULL,
   `qbombas` int NOT NULL,
   `modalidade` varchar(10) NOT NULL,
-  `tempo` varchar(30) NOT NULL,
-  `resultado` varchar(20) NOT NULL,
+  `tempo` varchar(30) NOT NULL DEFAULT '',
+  `resultado` varchar(20) NOT NULL DEFAULT '',
   `datahora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

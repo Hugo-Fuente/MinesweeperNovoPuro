@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang = "pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8"/>
-    <title>Login</title>
+    <title>Campo Minado</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <!-- fonte usada em algumas partes do site-->
     <style>
@@ -11,22 +11,29 @@
 </head>
 
 <body>
+    <!-- a seção tela é o quadrado que contém todas
+    as outras seções do site. Para ter esse efeito, 
+    ela funciona, basicamente, como um body dentro de 
+    um body-->
     <section id="tela">
+
         <section class="cabecalho">
-                <h1 class="titulo">Login</h1>
+            <h1 class="titulo">Campo Minado</h1>
         </section>
 
-		<h4 id="invalido"></h4>
-		
-        <section>
-			<form name="formulario" action="login.php" method="POST">
-                <p>Usuário: <input id="username" class="texto" type="text" name="username" required/></p>
-				<p>Senha: <input id="senha" class="texto" type="password" name="senha" required></p>
-			    <input class="normal" type="submit" value="LOGIN" onclick="window.location.href='configs.html'" /><br>
-            </form>
+        <aside class="lateral">
+            <h4>Informações</h4>
+            <p>Não iniciada</p>
+        </aside>
+
+        <section id="jogo">
+            <img onclick="window.location.href='configuracao.php'" src="img/play.png" alt="aperte o play para jogar" id="play">
+        </section>             
+            
+        <section class="botoes">  
+            <button class="normal" type="button" onclick="window.location.href='editar.html'">Perfil</button>
+            <button class="normal" type="button" onclick="window.location.href='logout.php'">Sair</button>
         </section>
-        
-		<button class="normal" type="button" onclick="window.location.href='cadastro.html'">CADASTRAR</button>
     </section>
 
 </body>

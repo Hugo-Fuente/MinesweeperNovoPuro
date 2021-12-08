@@ -35,7 +35,7 @@
         WHERE username = '$sessionUser'";
 
         if ($conexao->query($sql) === TRUE) {
-            header("Location:jogo.php");
+            header("Location:index.html");
             exit();
         } else {
         echo "Error: " . $sql . "<br>" . $conexao->error;

@@ -25,7 +25,7 @@
 
     if($row == 1) {
         $_SESSION['usuario'] = $usuario;
-        header('Location:jogo.php');
+        header('Location:index.html');
         exit();
     } else {
         header('Location:erro.html');
